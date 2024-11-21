@@ -51,33 +51,39 @@
             <div>
                 <span>Projects</span>
                 <button>New</button>
-                <table id="example" class="display" style="width:100%">
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Idade</th>
-                            <th>Cidade</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>João</td>
-                            <td>25</td>
-                            <td>São Paulo</td>
-                        </tr>
-                        <tr>
-                            <td>Maria</td>
-                            <td>30</td>
-                            <td>Rio de Janeiro</td>
-                        </tr>
-                        <tr>
-                            <td>Pedro</td>
-                            <td>22</td>
-                            <td>Curitiba</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
+                <div class="list">
+                    <table id="example" class="display" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Idade</th>
+                                <th>Cidade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>João</td>
+                                <td>25</td>
+                                <td>São Paulo</td>
+                            </tr>
+                            <tr>
+                                <td>Maria</td>
+                                <td>30</td>
+                                <td>Rio de Janeiro</td>
+                            </tr>
+                            <tr>
+                                <td>Pedro</td>
+                                <td>22</td>
+                                <td>Curitiba</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <script>
+                    $(document).ready(function() {
+                        $('#example').DataTable();
+                    });
+                </script>
             </div>
         </div>
     </div>

@@ -1,7 +1,3 @@
-$(document).ready(function() {
-    $('#example').DataTable();
-});
-
 $('#example').DataTable({
     paging: true,        // Ativa paginação
     searching: true,     // Ativa barra de pesquisa
