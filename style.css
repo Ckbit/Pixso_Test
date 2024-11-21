@@ -4,8 +4,8 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: monospace;
-    background-color: #000;
-    color: #0f0;
+    background-color: rgb(58, 58, 58);
+    color: rgb(0, 0, 0);
 }
 
 #console {
@@ -18,13 +18,158 @@ body, html {
 }
 
 /* Rectangle 1 */
-body {
+.rectangle-1 {
     position: absolute; 
     width: 1920px;
-    height: 373px;
+    height: 300px;
     left: 0;
     right: 0;
     top: 0;
     bottom: 707px;
-    background: rgb(196, 196, 196);
+    background: rgb(39, 39, 39);
 }
+
+/* Rectangle 2 */
+.rectangle-2 {
+    position: absolute; 
+    width: 220px;
+    height:1920px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 707px;
+    background: rgb(34, 34, 34);
+}
+
+/* sumary */
+.sumary {
+    position: absolute;
+    width: 1190px;
+    height: 230px;
+    left: 522px;
+    right: 208px;
+    top: 72px;
+    bottom: 778px;
+    font-size: 34px;
+}
+
+/* Circle 1 */
+.circle-1 {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    background: rgba(211, 1, 1, 0.66);
+}
+
+/* Circle 2 */
+.circle-2 {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: 200px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    background: rgba(255, 242, 63, 0.66);
+}
+
+/* Circle 3 */
+.circle-3 {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: 400px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    background: rgba(92, 239, 87, 0.66);
+}
+
+/* Circle 4 */
+.circle-4 {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: 600px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    background: rgba(1, 153, 211, 0.66);
+}
+
+/* Circle 1 */
+.circle-5 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 30px;
+    right: 0;
+    top: 30px;
+    bottom: 0;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Circle 2 */
+.circle-6 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 230px;
+    right: 0;
+    top: 30px;
+    bottom: 0;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Circle 3 */
+.circle-7 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 430px;
+    right: 0;
+    top: 30px;
+    bottom: 0;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Circle 4 */
+.circle-8 {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: 630px;
+    right: 0;
+    top: 30px;
+    bottom: 0;
+    border-radius: 50%;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

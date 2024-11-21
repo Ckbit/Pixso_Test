@@ -1,12 +1,11 @@
-// Seleciona o elemento do console
-const consoleElement = document.getElementById('console');
+$(document).ready(function() {
+    $('#example').DataTable();
+});
 
-// Função para adicionar mensagens ao console
-function logToConsole(message) {
-    consoleElement.textContent += message + '\n';
-    consoleElement.scrollTop = consoleElement.scrollHeight; // Rola automaticamente para o final
-}
-
-// Exemplo de uso
-logToConsole('Bem-vindo ao console!');
-logToConsole('Digite seus comandos...');
+$('#example').DataTable({
+    paging: true,        // Ativa paginação
+    searching: true,     // Ativa barra de pesquisa
+    info: true,          // Exibe informações de status (ex.: "Mostrando 1-10 de 50 registros")
+    lengthChange: false, // Remove a opção de alterar o número de linhas mostradas
+    order: [[1, 'asc']]  // Ordena por padrão pela segunda coluna (Idade), crescente
+});
