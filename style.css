@@ -1,0 +1,30 @@
+/* Faz o console ocupar toda a tela */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: monospace;
+    background-color: #000;
+    color: #0f0;
+}
+
+#console {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    white-space: pre-wrap; /* Preserva os espaços e quebras de linha */
+}
+
+/* Rectangle 1 */
+body {
+    position: absolute; 
+    width: 1920px;
+    height: 373px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 707px;
+    background: rgb(196, 196, 196);
+}
