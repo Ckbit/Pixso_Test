@@ -21,8 +21,8 @@ document.getElementById('loginButton').addEventListener('click', async () => {
         const data = await response.json();
 
         if (data.success) {
-            // Autenticação bem-sucedida
-            window.location.href = 'console.html'; // Redireciona para o console.html
+            // Redireciona para console.html
+            location.assign('console.html');
         } else {
             // Exibe mensagem de erro
             errorMessage.textContent = data.message || 'Erro ao realizar login.';

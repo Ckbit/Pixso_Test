@@ -20,7 +20,7 @@ router.post('/login', async (req, res) => {
     try {
         const user = await User.findOne({ username, password });
         if (user) {
-            res.status(200).json({ message: 'Login bem-sucedido!' });
+            res.status(200).json({ success : true ,message: 'Login bem-sucedido!' });
         } else {
             res.status(401).json({ error: 'Credenciais inválidas.' });
         }
