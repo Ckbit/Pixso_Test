@@ -173,12 +173,11 @@ body, html {
     align-items: center;
 }
 
+/* list */
 .list {
-    display: absolute;
-    justify-content: center;
-    align-items: center;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
+    position: absolute; /* Permite posicionar o elemento livremente */
+    top: 310px;          /* Distância do topo da página */
+    left: 240px;        /* Distância da borda esquerda */
+    width: 1650px;        /* Ajusta automaticamente o tamanho */
 }
+
