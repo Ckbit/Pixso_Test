@@ -5,11 +5,14 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const userRoutes = require('./routes/userRoutes');
+const dataRoutes = require('./routes/dataRoutes');
+
 
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 app.use('/api/users', userRoutes);
+app.use('/api/data', dataRoutes);
 
 // Conexão com MongoDB Atlas
 mongoose.connect(process.env.MONGO_URI, {
