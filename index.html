@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- DataTables JS -->
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
     <head>
         <link rel="stylesheet" href="style.css">
     </head>    
@@ -45,14 +46,15 @@
                 <div>0</div>
             </div>
         </div>
-        
+
         <!-- Main Content -->
         <div>
             <div>
                 <span>Projects</span>
                 <button>New</button>
-                <div class="list">
-                    <table id="example" class="display" style="width:100%">
+                <div class="container">
+                    <h1>Lista de Dados</h1>
+                    <table id="dataTable" class="display" style="width:100%">
                         <thead>
                             <tr>
                                 <th>Nome</th>
@@ -61,31 +63,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>João</td>
-                                <td>25</td>
-                                <td>São Paulo</td>
-                            </tr>
-                            <tr>
-                                <td>Maria</td>
-                                <td>30</td>
-                                <td>Rio de Janeiro</td>
-                            </tr>
-                            <tr>
-                                <td>Pedro</td>
-                                <td>22</td>
-                                <td>Curitiba</td>
-                            </tr>
+                           <!-- Os dados serão preenchidos dinamicamente -->
                         </tbody>
                     </table>
                 </div>
-                <script>
-                    $(document).ready(function() {
-                        $('#example').DataTable();
-                    });
-                </script>
+                <script src="app.js"></script>
             </div>
         </div>
+        <div id="loader" style="display: none;">Carregando dados...</div>
+
     </div>
 </body>
 </html>

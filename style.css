@@ -174,10 +174,12 @@ body, html {
 }
 
 /* list */
-.list {
+.container {
     position: absolute; /* Permite posicionar o elemento livremente */
     top: 310px;          /* Distância do topo da página */
     left: 240px;        /* Distância da borda esquerda */
     width: 1650px;        /* Ajusta automaticamente o tamanho */
+    color: rgb(173, 173, 173);
 }
+
 
