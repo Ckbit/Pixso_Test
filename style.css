@@ -22,7 +22,7 @@
 .rectangle-1 {
     position: absolute; 
     width: 1920px;
-    height: 300px;
+    height: 250px;
     left: 0;
     right: 0;
     top: 0;
@@ -49,7 +49,7 @@
     height: 230px;
     left: 522px;
     right: 208px;
-    top: 72px;
+    top: 32px;
     bottom: 778px;
     font-size: 34px;
 }
@@ -177,9 +177,9 @@
 /* list */
 .container {
     position: absolute; /* Permite posicionar o elemento livremente */
-    top: 310px;          /* Distância do topo da página */
+    top: 240px;          /* Distância do topo da página */
     left: 240px;        /* Distância da borda esquerda */
-    width: 1650px;        /* Ajusta automaticamente o tamanho */
+    width: 1350px;        /* Ajusta automaticamente o tamanho */
     color: rgb(173, 173, 173);
 }
 
