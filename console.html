@@ -11,6 +11,11 @@
     <!-- DataTables JS -->
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
+    <script src="console.js"></script>
+    <script src="script.js"></script>
+    <script src="projects.js"></script>
+    <script src="overlay.js"></script>
+    <ul id="projectList"></ul>
     <head>
         <link rel="stylesheet" href="style.css">
     </head>    
@@ -46,11 +51,27 @@
                 <div>0</div>
             </div>
         </div>
-        
+
+        <!-- Overlay -->
+        <div id="overlay" class="overlay hidden">
+            <div class="overlay-content">
+                <h2>Adicionar Projeto</h2>
+                <form id="addProjectForm">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" required></textarea>
+                    <div class="overlay-buttons">
+                        <button type="button" id="cancelButton" class="btn cancel">Cancelar</button>
+                        <button type="submit" class="btn add">Adicionar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <!-- Main Content -->
         <div>
             <div>
-                <button>New</button>
                 <div class="container">
                     <h1>Lista de Dados</h1>
                     <table id="dataTable" class="display" style="width:100%">

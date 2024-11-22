@@ -21,10 +21,14 @@ document.getElementById('loginButton').addEventListener('click', async () => {
         const data = await response.json();
 
         if (data.success) {
-            // Redireciona para console.html
+            console.log('Login bem-sucedido, salvando token...');
+            localStorage.setItem('authToken', data.token); // Salva o token no localStorage
+            console.log('Token recebido do servidor:', data.token);
+            console.log('Salvando token no localStorage...');
             location.assign('console.html');
         } else {
             // Exibe mensagem de erro
+            console.log('Erro de autenticação:', data.message);
             errorMessage.textContent = data.message || 'Erro ao realizar login.';
         }
     } catch (error) {

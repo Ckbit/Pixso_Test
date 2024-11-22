@@ -1,0 +1,19 @@
+const express = require('express');
+const Data = require('../models/Data');
+const { authenticateToken } = require('./userRoutes');
+
+const router = express.Router();
+
+// Rota para buscar projetos individuais
+router.get('/projects', authenticateToken, async (req, res) => {
+    try {
+        const userId = req.user.id; // Obtém o ID do usuário do token
+        const projects = await Data.find({ userId }); // Filtra pelo ID do usuário
+        res.status(200).json(projects);
+    } catch (err) {
+        console.error('Erro ao buscar projetos:', err);
+        res.status(500).json({ message: 'Erro no servidor' });
+    }
+});
+
+module.exports = router;
