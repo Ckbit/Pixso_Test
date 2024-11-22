@@ -6,6 +6,7 @@ body, html {
     font-family: monospace;
     background-color: rgb(58, 58, 58);
     color: rgb(0, 0, 0);
+    overflow: hidden; /* Desabilita o scroll vertical e horizontal */
 }
 
 #console {
