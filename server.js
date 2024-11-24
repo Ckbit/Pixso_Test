@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const { router: userRoutes } = require('./routes/userRoutes');
 const dataRoutes = require('./routes/dataRoutes');
 const app = express();
+const path = require('path');
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -28,8 +29,11 @@ app.get('/', (req, res) => {
     res.send('Servidor está funcionando!');
 });
 
+// Configura a pasta 'public' para servir arquivos estáticos
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Iniciar o servidor
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => { // Alterado para aceitar conexões de outros dispositivos
     console.log(`Servidor rodando na porta ${PORT}`);
 });

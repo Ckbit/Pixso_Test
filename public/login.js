@@ -21,7 +21,7 @@ document.getElementById('loginButton').addEventListener('click', async () => {
         const data = await response.json();
 
         if (data.success) {
-            console.log('Login bem-sucedido, salvando token...');
+            console.log('Login bem-sucedido');
             localStorage.setItem('authToken', data.token); // Salva o token no localStorage
             console.log('Token recebido do servidor:', data.token);
             console.log('Salvando token no localStorage...');
