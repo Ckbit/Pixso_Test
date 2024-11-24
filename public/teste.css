@@ -90,6 +90,8 @@ body {
     border-radius: 15px;
     margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px); /* Ocupa metade do container */
+    max-width: 500px; /* Limite máximo de largura */
 }
 
 .profile img {
@@ -120,15 +122,18 @@ body {
 
 /* Content */
 .content {
-    grid-row: 2;
+    grid-row: 3;
 }
 
 /* Project Box */
 .project-box {
     background-color: #1e1e1e;
+    height: 50vh;
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: calc(100% - 10px); /* Ocupa metade do container */
+    max-width: 1060px; /* Limite máximo de largura */
 }
 
 .project-box h1 {
@@ -208,17 +213,34 @@ body {
     }
     
     .profile {
+        width: 100%; /* Ocupa toda a largura em telas menores */
+        max-width: none;
         flex-direction: column;
         text-align: center;
     }
     
     .profile img {
         margin-right: 0;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
+        width: 100px;
+        height: 100px;
     }
 }
 
+
 @media (max-width: 768px) {
+    .profile {
+        padding: 10px;
+    }
+    
+    .username {
+        font-size: 1rem;
+    }
+    
+    .user-role {
+        font-size: 0.8rem;
+    }
+    
     .navbar {
         flex-direction: column;
     }
