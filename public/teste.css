@@ -25,6 +25,7 @@ body {
 /* Navbar */
 .navbar {
     grid-column: 1 / -1;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,8 +63,43 @@ body {
     color: #000;
 }
 
+.navbar-options {
+    display: none; /* Esconder as opções por padrão */
+    position: absolute;
+    background-color: #444;
+    width: 175px; /* Largura do painel */
+    height: auto; /* Altura automática para se ajustar ao conteúdo */
+    top: 50px; /* Ajuste conforme necessário */
+    right: 0; /* Alinhado à direita */
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Para garantir que fique acima de outros elementos */
+}
+
+.navbar-options a {
+    color: white;
+    text-decoration: none;
+    display: block; /* Cada opção ocupa uma linha */
+    padding: 10px;
+    border-bottom: 1px solid #555; /* Adiciona uma linha entre as opções */
+}
+
+.navbar-options a:last-child {
+    border-bottom: none; /* Remove a linha da última opção */
+}
+
+.navbar-options.show {
+    display: block; /* Mostrar as opções quando a classe 'show' for adicionada */
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 24px;
+}
+
 /* Sidebar */
 .sidebar {
+    grid-column: 1;
     grid-row: 2;
     background-color: #1c1c1c;
     padding: 20px;
@@ -73,12 +109,18 @@ body {
 
 /* Container */
 .container {
-    display: grid;
-    grid-template-rows: auto 1fr;
+    display: flex;
+    flex-direction: row; /* Coloca os elementos em coluna */
     gap: 20px;
     padding: 20px;
     background-color: #2c2c2c;
     overflow-y: auto;
+}
+
+.top-row {
+    display: flex; /* Para colocar as caixas lado a lado */
+    gap: 20px; /* Espaçamento entre as caixas */
+    margin-bottom: 20px; /* Espaçamento abaixo da linha superior */
 }
 
 /* Profile */
@@ -120,9 +162,34 @@ body {
     color: #bbbbbb;
 }
 
+/* Date */
+.date-box {
+    display: grid;
+    grid-column:  2;
+    flex-direction: column; /* Para alinhar o título e a data verticalmente */
+    align-items: center; /* Centraliza o conteúdo */
+    margin: 0 0 10px 0; /* Margem inferior para o título */
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: calc(100% - 10px); /* Ocupa metade do container */
+    max-width: 1060px; /* Limite máximo de largura */
+}
+
+.date-box h2 {
+    margin: 0 0 10px 0; /* Margem inferior para o título */
+}
+
+#current-date {
+    font-size: 1.5rem; /* Tamanho da fonte da data */
+    font-weight: bold; /* Negrito */
+}
+
 /* Content */
 .content {
     grid-row: 3;
+    grid-column: 2;
 }
 
 /* Project Box */
@@ -241,17 +308,23 @@ body {
         font-size: 0.8rem;
     }
     
-    .navbar {
+    .navbar-options {
+        display: none; /* Esconder as opções por padrão */
         flex-direction: column;
+        position: absolute;
+        background-color: #333;
+        top: 50px; /* Ajuste conforme necessário */
+        right: 0;
+        width: 100%;
     }
-    
-    .navbar nav ul {
-        margin-top: 10px;
-        flex-direction: column;
-        align-items: center;
+
+    .navbar-options a {
+        padding: 15px;
+        text-align: center;
+        display: block;
     }
-    
-    .navbar nav ul li {
-        margin-bottom: 10px;
-    }
+
+    .navbar-options.show {
+        display: flex; /* Mostrar as opções quando a classe 'show' for adicionada */
+    }   
 }

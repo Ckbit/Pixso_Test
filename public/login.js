@@ -25,7 +25,7 @@ document.getElementById('loginButton').addEventListener('click', async () => {
             localStorage.setItem('authToken', data.token); // Salva o token no localStorage
             console.log('Token recebido do servidor:', data.token);
             console.log('Salvando token no localStorage...');
-            location.assign('console.html');
+            location.assign('dashboard.html');
         } else {
             // Exibe mensagem de erro
             console.log('Erro de autenticação:', data.message);

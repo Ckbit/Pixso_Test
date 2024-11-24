@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+    </aside>
+    <div class="content">
+      <header class="header">
+        <div class="header-title">Dashboard</div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      </header>
+      <div id="dropdown-menu">
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </div>
+      <main class="main-content">
+        <section class="profile-card">
+          <div class="profile-picture"></div>
+          <div class="profile-info">
+            <h2>John Doe</h2>
+            <p>Web Developer</p>
+          </div>
+        </section>
+        <section class="calendar-card">
+          <h2>Calendar</h2>
+          <p>Sunday</p>
+          <p>October, 12, 2024</p>
+          <div class="weather-icon">
+            <span>☀️</span>
+            <span>☁️</span>
+          </div>
+        </section>
+        <section class="projects-card">
+          <div class="projects-header">
+            <h2>Projects</h2>
+            <button class="new-project-btn" onclick="openOverlay()">New</button>
+          </div>
+          <div class="projects-list" id="projects-list">
+            <!-- New projects will appear here -->
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Overlay Modal -->
+  <div class="overlay" id="overlay">
+    <div class="overlay-content">
+      <h3>Create New Project</h3>
+      <form id="new-project-form">
+        <label for="project-name">Name:</label>
+        <input type="text" id="project-name" required>
+        <label for="project-notes">Observations:</label>
+        <textarea id="project-notes" rows="4" required></textarea>
+        <div class="overlay-buttons">
+          <button type="button" onclick="addProject()">Add</button>
+          <button type="button" onclick="closeOverlay()">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

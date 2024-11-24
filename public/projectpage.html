@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+  <link rel="stylesheet" href="teste2.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2 id="project-title">Project</h2>
+      <button class="new-task-btn" onclick="openTaskOverlay()">New Task</button>
+      <ul id="tasks-list">
+        <!-- Tasks with checkboxes will be added here -->
+      </ul>
+    </aside>
+    <div class="content">
+      <header class="header">
+        <div class="header-title">Project Details</div>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+      </header>
+      <div id="dropdown-menu">
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </div>
+      <main class="main-content">
+        <h2>Welcome to your project!</h2>
+        <p>Start managing your tasks using the sidebar.</p>
+      </main>
+    </div>
+  </div>
+
+  <!-- Overlay Modal for Adding Tasks -->
+  <div class="overlay" id="task-overlay">
+    <div class="overlay-content">
+      <h3>Add New Task</h3>
+      <form id="new-task-form">
+        <label for="task-name">Task Name:</label>
+        <input type="text" id="task-name" required>
+        <div class="overlay-buttons">
+          <button type="button" onclick="addTask()">Add</button>
+          <button type="button" onclick="closeTaskOverlay()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="projectpage.js"></script>
+</body>
+</html>
