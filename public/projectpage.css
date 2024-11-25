@@ -1,3 +1,318 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #212121;
+  color: white;
+}
+
+.container {
+  display: flex;
+}
+
+
+#tasks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#tasks-list li {
+  display: flex;
+  align-items: center;
+  background-color: #444;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+#tasks-list li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Overlay Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay-content {
+  background-color: #2c2c2c;
+  padding: 30px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #fff;
+}
+
+.overlay-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #00ff00;
+}
+
+.overlay-content label {
+  display: block;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.overlay-content input {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #444;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.overlay-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.overlay-buttons button {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.overlay-buttons button:first-child {
+  background-color: #00cc00;
+  color: #fff;
+}
+
+.overlay-buttons button:first-child:hover {
+  background-color: #009900;
+}
+
+.overlay-buttons button:last-child {
+  background-color: #cc0000;
+  color: #fff;
+}
+
+.overlay-buttons button:last-child:hover {
+  background-color: #990000;
+}
+
+
+.content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 150px;
+  background-color: #444;
+  border: 1px solid #555;
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+#dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#dropdown-menu ul li {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #555;
+}
+
+#dropdown-menu ul li:last-child {
+  border-bottom: none;
+}
+
+#dropdown-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+#dropdown-menu ul li a:hover {
+  color: #00ff00;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.projects-card {
+  grid-column: span 2;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 1.5rem;
+  height: calc(100vh - 250px);
+  overflow-y: auto;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-project-btn {
+  background-color: #00ff00;
+  color: #333;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.new-project-btn:hover {
+  background-color: #00cc00;
+}
+
+.projects-list {
+  margin-top: 1rem;
+}
+
+.projects-list .project-item {
+  background-color: #444;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Overlay Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85); /* Mais escuro e opaco */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.overlay-content {
+  background-color: #2c2c2c; /* Cor escura elegante */
+  padding: 30px;
+  border-radius: 12px; /* Cantos mais arredondados */
+  width: 350px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra elegante */
+  text-align: center; /* Centraliza o conteúdo */
+  color: #fff;
+}
+
+.overlay-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #00ff00; /* Destaque do título */
+}
+
+.overlay-content label {
+  display: block;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.overlay-content input,
+.overlay-content textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #444;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  resize: none; /* Evita redimensionar o textarea */
+}
+
+.overlay-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Espaço entre os botões */
+}
+
+.overlay-buttons button {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.overlay-buttons button:first-child {
+  background-color: #00cc00; /* Verde para o botão "Adicionar" */
+  color: #fff;
+}
+
+.overlay-buttons button:first-child:hover {
+  background-color: #009900; /* Verde mais escuro no hover */
+}
+
+.overlay-buttons button:last-child {
+  background-color: #cc0000; /* Vermelho para o botão "Cancelar" */
+  color: #fff;
+}
+
+.overlay-buttons button:last-child:hover {
+  background-color: #990000; /* Vermelho mais escuro no hover */
+}
+
 /* Sidebar */
 .sidebar {
     width: 250px;

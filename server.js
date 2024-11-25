@@ -8,11 +8,13 @@ const { router: userRoutes } = require('./routes/userRoutes');
 const dataRoutes = require('./routes/dataRoutes');
 const app = express();
 const path = require('path');
+const projectRoutes = require('./routes/projectRoutes');
 
 app.use(bodyParser.json());
 app.use(cors());
 app.use('/api/users', userRoutes);
 app.use('/api/data', dataRoutes);
+app.use('/api/projects', projectRoutes);
 
 // Conexão com MongoDB Atlas
 mongoose.connect(process.env.MONGO_URI, {

@@ -100,4 +100,36 @@ function toggleMenu() {
     loadProjectPage();
   }
   
+  document.addEventListener('DOMContentLoaded', async () => {
+    try {
+      const response = await fetch('/api/users/login'); // Atualize com a rota correta para obter o usuário atual
+      const user = await response.json();
+      document.querySelector('#profile-info').textContent = user.name;
+    } catch (error) {
+      console.error('Erro ao carregar usuário:', error);
+    }
+  });
+
+  document.querySelector('#create-project-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const name = document.querySelector('#project-name').value;
+    const description = document.querySelector('#project-description').value;
+  
+    try {
+      const response = await fetch('/api/projects/create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId: 'USER_ID_HERE', name, description }), // Substitua 'USER_ID_HERE' dinamicamente
+      });
+      const data = await response.json();
+      if (data.success) {
+        alert('Projeto criado com sucesso!');
+        loadProjects(); // Recarregar os projetos após criação
+      } else {
+        alert('Erro ao criar projeto');
+      }
+    } catch (error) {
+      console.error('Erro ao criar projeto:', error);
+    }
+  });
   
